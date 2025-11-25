@@ -19,7 +19,7 @@ class TensorBasics:
 
     def run(self):
         self.matrices_info()
-        
+
         # matrix operations
         addition_result = self.matrices_addition()
         subtraction_result = self.matrices_subtraction()
@@ -27,6 +27,32 @@ class TensorBasics:
         print('Addition Result:\n', addition_result.numpy())
         print('Subtraction Result:\n', subtraction_result.numpy())
         print('Multiplication Result:\n', multiplication_result.numpy())
+
+        # broadcasting example
+        self.broadcast_example()
+        # reshaping example
+        self.reshape_example()
+        # gradient example
+        self.gradient_example()
+
+    def gradient_example(self):
+        x = tf.Variable(3.0)
+
+        with tf.GradientTape() as tape:
+            y = x ** 2 + 2 * x + 1
+
+        dy_dx = tape.gradient(y, x)
+        print('Gradient dy/dx at x=3:', dy_dx.numpy())
+
+    def reshape_example(self):
+        reshaped = tf.reshape(self.a, [4, 1])
+        print('Reshaped Matrix A:\n', reshaped.numpy())
+    
+
+    def broadcast_example(self):
+
+        result = self.a + tf.constant([1., 2.])
+        print('Broadcasting Result:\n', result.numpy())
 
     def matrices_addition(self):
         return tf.add(self.a, self.b)
