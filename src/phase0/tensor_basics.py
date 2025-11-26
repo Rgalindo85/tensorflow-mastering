@@ -24,9 +24,9 @@ class TensorBasics:
         addition_result = self.matrices_addition()
         subtraction_result = self.matrices_subtraction()
         multiplication_result = self.matrices_multiplication() 
-        print('Addition Result:\n', addition_result.numpy())
-        print('Subtraction Result:\n', subtraction_result.numpy())
-        print('Multiplication Result:\n', multiplication_result.numpy())
+        logging.info('Addition Result:\n%s', addition_result.numpy())
+        logging.info('Subtraction Result:\n%s', subtraction_result.numpy())
+        logging.info('Multiplication Result:\n%s', multiplication_result.numpy())
 
         # broadcasting example
         self.broadcast_example()
@@ -42,17 +42,17 @@ class TensorBasics:
             y = x ** 2 + 2 * x + 1
 
         dy_dx = tape.gradient(y, x)
-        print('Gradient dy/dx at x=3:', dy_dx.numpy())
+        logging.info('Gradient dy/dx at x=3: %s', dy_dx.numpy())
 
     def reshape_example(self):
         reshaped = tf.reshape(self.a, [4, 1])
-        print('Reshaped Matrix A:\n', reshaped.numpy())
+        logging.info('Reshaped Matrix A:\n%s', reshaped.numpy())
     
 
     def broadcast_example(self):
 
         result = self.a + tf.constant([1., 2.])
-        print('Broadcasting Result:\n', result.numpy())
+        logging.info('Broadcasting Result:\n%s', result.numpy())
 
     def matrices_addition(self):
         return tf.add(self.a, self.b)
@@ -68,6 +68,7 @@ class TensorBasics:
         print(self.a)
         print('Matrix B:')
         print(self.b)
+
 
 if __name__ == "__main__":
     log_fmt = "%(asctime)s - %(levelname)s - %(message)s"
