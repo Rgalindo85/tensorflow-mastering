@@ -39,9 +39,12 @@ class LinearRegressionScratch:
 
 
 def main():
+
+    xs = [-1.0, 0.0, 1.0, 2.0, 3.0, 4.0]
+    ys = [-3.0, -1.0, 1.0, 3.0, 5.0, 7.0]
     
-    x = tf.constant([1., 2., 3., 4.])
-    y = tf.constant([3., 5., 7., 9.])
+    x = tf.constant(xs)
+    y = tf.constant(ys)
 
     model = LinearRegressionScratch()
     model.train(x, y, epochs=300, lr=0.01)
