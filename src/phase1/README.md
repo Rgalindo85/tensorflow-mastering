@@ -4,9 +4,9 @@ This directory contains the scripts and materials to start deep learning using T
 
 ## Main files
 
-- `mlp_classifier.py`: 
-- `tf_data_pipeline.py`:
-- `custom_training_loop.py`: 
+- `mlp_classifier.py`: Implementation of a multilayer perceptron (MLP) classifier for image classification tasks.
+- `tf_data_pipeline.py`: Script for building and managing TensorFlow data pipelines for efficient data loading and preprocessing.
+- `custom_training_loop.py`: Example of a custom training loop using TensorFlow for more flexible model training and evaluation.
 - `fashion_classifier.py`: Implementation of a image classifier for MNIST fashion dataset using neural nets.
 
 ## Phase objectives
