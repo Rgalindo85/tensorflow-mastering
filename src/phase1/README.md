@@ -1,6 +1,6 @@
 # Phase 1: Deep Learning with TensorFlow
 
-This directory contains the scripts and material to start the deep learning using TensorFlow, treating topics and advanced projects that previous phase.
+This directory contains the scripts and materials to start deep learning using TensorFlow, covering topics and advanced projects from the previous phase.
 
 ## Main files
 
