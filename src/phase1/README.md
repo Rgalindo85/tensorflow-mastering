@@ -22,6 +22,6 @@ Excecute the scripts from terminal:
 python fashion_classifier.py
 ```
 
-## Autor
+## Author
 
 Roger Galindo
