@@ -32,7 +32,10 @@ class LinearRegressionScratch:
         
             if epoch % 50 == 0:
                 logging.info('Epoch %d: Loss: %.4f, W: %.4f, b: %.4f',
-                             epoch, loss_value.numpy(), self.W.numpy()[0], self.b.numpy()[0])
+                             epoch, loss_value.numpy(), 
+                             self.W.numpy()[0], 
+                             self.b.numpy()[0]
+                             )
 
 
 def main():
