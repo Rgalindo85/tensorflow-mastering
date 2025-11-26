@@ -15,6 +15,7 @@ def main():
     print(f"Predictions: {predictions}")
     print(f"Predicted classes: {predicted_classes}")
 
+
 class MLPClassifier:
     def __init__(self, input_dim: int = 20, num_classes: int = 2):
         # Define a simple MLP model
@@ -28,7 +29,8 @@ class MLPClassifier:
         # Compile and train the model
         self.model.compile(optimizer='adam',
                            loss='sparse_categorical_crossentropy',
-                           metrics=['accuracy'])
+                           metrics=['accuracy']
+                           )
         self.model.fit(x, y, epochs=epochs, batch_size=batch_size)
     
     def predict(self, x):
