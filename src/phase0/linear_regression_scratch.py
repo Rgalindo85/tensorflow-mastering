@@ -46,6 +46,10 @@ def main():
     model = LinearRegressionScratch()
     model.train(x, y, epochs=300, lr=0.01)
 
+    x_test = tf.constant([5., 6.])
+    y_pred = model.predict(x_test)
+    logging.info('Predictions for x_test [5., 6.]: %s', y_pred.numpy())
+
 
 if __name__ == "__main__":
     log_fmt = "%(asctime)s - %(levelname)s - %(message)s"
